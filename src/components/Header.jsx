@@ -1,5 +1,6 @@
 import { ArrowRight, Menu, Phone, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from '../assets/logo.png';
 import '../styles/Header.css';
 
 export default function Header() {
@@ -17,7 +18,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="header-logo">
-          <img src="/src/assets/logo.png" alt="Creatus Technologies" />
+          <img src={logo} alt="Creatus Technologies" />
         </div>
 
         {/* Desktop menu */}

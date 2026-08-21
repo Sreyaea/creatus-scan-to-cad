@@ -1,13 +1,19 @@
 import '../styles/FileFormats.css';
+import solidWorksLogo from '../assets/solid_works.png';
+import inventorLogo from '../assets/autodesk_inventor.png';
+import solidEdgeLogo from '../assets/siemens_solid_edge.png';
+import stepLogo from '../assets/step.png';
+import igesLogo from '../assets/iges.png';
+import parasolidLogo from '../assets/parasolid.png';
 
 export default function FileFormats() {
   const formats = [
-    { name: 'SolidWorks', type: 'logo', logo: '/src/assets/solid_works.png' },
-    { name: 'Autodesk Inventor', type: 'logo', logo: '/src/assets/autodesk_inventor.png' },
-    { name: 'Solid Edge', type: 'logo', logo: '/src/assets/siemens_solid_edge.png' },
-    { name: 'STEP', type: 'logo', logo: '/src/assets/step.png' },
-    { name: 'IGES', type: 'logo', logo: '/src/assets/iges.png' },
-    { name: 'Parasolid', type: 'logo', logo: '/src/assets/parasolid.png' }
+    { name: 'SolidWorks', type: 'logo', logo: solidWorksLogo },
+    { name: 'Autodesk Inventor', type: 'logo', logo: inventorLogo },
+    { name: 'Solid Edge', type: 'logo', logo: solidEdgeLogo },
+    { name: 'STEP', type: 'logo', logo: stepLogo },
+    { name: 'IGES', type: 'logo', logo: igesLogo },
+    { name: 'Parasolid', type: 'logo', logo: parasolidLogo }
   ];
 
   return (

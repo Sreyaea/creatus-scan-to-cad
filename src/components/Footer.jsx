@@ -1,4 +1,5 @@
 import { Mail, Phone } from 'lucide-react';
+import logo from '../assets/logo.png';
 import '../styles/Footer.css';
 
 export default function Footer() {
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <img src="/src/assets/logo.png" alt="Creatus Technologies" className="footer-logo" />
+            <img src={logo} alt="Creatus Technologies" className="footer-logo" />
           </div>
 
           <div className="footer-section footer-contact">

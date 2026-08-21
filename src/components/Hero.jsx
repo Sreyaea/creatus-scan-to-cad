@@ -1,3 +1,4 @@
+import heroImage from '../assets/hero-scan-cad.png';
 import '../styles/Hero.css';
 
 export default function Hero() {
@@ -24,7 +25,7 @@ export default function Hero() {
           </button>
         </div>
         <div className="hero-image">
-          <img src="/src/assets/hero-scan-cad.png" alt="3D scanning to CAD conversion process" />
+          <img src={heroImage} alt="3D scanning to CAD conversion process" />
         </div>
       </div>
     </section>

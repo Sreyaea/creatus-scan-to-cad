@@ -1,13 +1,19 @@
 import '../styles/TrustBar.css';
+import autodeskInventor from '../assets/autodesk_inventor.png';
+import solidworks from '../assets/solidworks.png';
+import fusion360 from '../assets/autodesk_fusion_360.png';
+import solidEdge from '../assets/siemens_solid_edge.png';
+import geomagic from '../assets/geomagic.png';
+import ptc from '../assets/ptc.png';
 
 export default function TrustBar() {
   const software = [
-    { name: 'Autodesk Inventor', logo: '/src/assets/autodesk_inventor.png' },
-    { name: 'SolidWorks', logo: '/src/assets/solidworks.png' },
-    { name: 'Autodesk Fusion 360', logo: '/src/assets/autodesk_fusion_360.png' },
-    { name: 'Siemens Solid Edge', logo: '/src/assets/siemens_solid_edge.png' },
-    { name: 'Geomagic', logo: '/src/assets/geomagic.png' },
-    { name: 'PTC', logo: '/src/assets/ptc.png' }
+    { name: 'Autodesk Inventor', logo: autodeskInventor },
+    { name: 'SolidWorks', logo: solidworks },
+    { name: 'Autodesk Fusion 360', logo: fusion360 },
+    { name: 'Siemens Solid Edge', logo: solidEdge },
+    { name: 'Geomagic', logo: geomagic },
+    { name: 'PTC', logo: ptc }
   ];
 
   return (
