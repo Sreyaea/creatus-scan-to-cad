@@ -1,0 +1,201 @@
+.hero {
+  padding: 3.2rem 2rem 3rem;
+  background-color: #0B1F3A;
+  background-image:
+    linear-gradient(90deg, #07172B 0%, rgba(7, 23, 43, 0.98) 34%, rgba(7, 23, 43, 0.74) 58%, rgba(7, 23, 43, 0.24) 100%),
+    radial-gradient(circle at 82% 48%, rgba(62, 162, 255, 0.2), rgba(11, 31, 58, 0.18) 34%, rgba(11, 31, 58, 0.74) 72%),
+    url('/src/assets/hero-scan-cad.png');
+  background-position: center right;
+  background-size: 100% 100%, 100% 100%, auto 108%;
+  background-repeat: no-repeat;
+  background-blend-mode: normal, soft-light, normal;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(90deg, black, transparent 72%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11, 31, 58, 0.32), transparent 28%, transparent 70%, rgba(11, 31, 58, 0.45)),
+    linear-gradient(90deg, transparent 48%, rgba(11, 31, 58, 0.18) 74%, rgba(11, 31, 58, 0.5));
+  pointer-events: none;
+}
+
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.hero-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--cta-orange);
+  text-transform: uppercase;
+  background: rgba(255, 107, 0, 0.12);
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  width: fit-content;
+}
+
+.hero-headline {
+  font-size: 2.65rem;
+  font-weight: 700;
+  line-height: 1.08;
+  color: var(--white);
+  max-width: 500px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.hero-headline::after {
+  content: '';
+  width: 72px;
+  height: 4px;
+  background-color: var(--primary-blue);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.hero-subtext {
+  font-size: 0.98rem;
+  color: #D1D5DB;
+  line-height: 1.65;
+  max-width: 500px;
+}
+
+.hero-cta {
+  background: linear-gradient(135deg, var(--cta-orange), #FF8A3C);
+  color: var(--white);
+  padding: 1rem 1.75rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  width: fit-content;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hero-cta:hover {
+  background: linear-gradient(135deg, var(--cta-orange-hover), #FF7620);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+}
+
+.hero-image img {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero {
+    padding: 3.25rem 2rem;
+  }
+
+  .hero-container {
+    grid-template-columns: minmax(0, 0.95fr) minmax(400px, 1fr);
+    gap: 2.75rem;
+    min-height: 340px;
+  }
+
+  .hero-headline {
+    font-size: 2.35rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .hero-headline {
+    font-size: 2.15rem;
+  }
+
+  .hero-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.25rem 1.5rem;
+  }
+
+  .hero-container {
+    min-height: auto;
+    gap: 1.5rem;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    height: 220px;
+    mask-image: linear-gradient(180deg, black 0%, black 82%, transparent 100%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 1rem 1.75rem;
+  }
+
+  .hero-headline {
+    font-size: 1.75rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .hero-subtext {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    height: 190px;
+  }
+}

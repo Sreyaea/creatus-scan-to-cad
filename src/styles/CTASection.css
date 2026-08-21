@@ -1,0 +1,155 @@
+.cta-section {
+  padding: 0 2rem 1.5rem;
+  background-color: var(--white);
+}
+
+.cta-section-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 2rem;
+  align-items: center;
+  background-color: #0B1F3A;
+  background-image:
+    radial-gradient(circle at 86% 36%, rgba(62, 162, 255, 0.18), transparent 34%),
+    linear-gradient(90deg, rgba(11, 31, 58, 0.99) 0%, rgba(11, 31, 58, 0.92) 56%, rgba(11, 31, 58, 0.78) 100%),
+    url('/src/assets/hero-scan-cad.png');
+  background-position: center right;
+  background-size: cover;
+  background-blend-mode: soft-light, normal, normal;
+  border-radius: 10px;
+  min-height: 130px;
+  padding: 1.25rem 3rem;
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+}
+
+.cta-section-container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 55%, rgba(11, 31, 58, 0.36));
+  pointer-events: none;
+}
+
+.cta-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-section-heading {
+  font-size: 1.75rem;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.cta-section-main {
+  font-size: 1.35rem;
+  color: #58A6FF;
+  font-weight: 600;
+}
+
+.cta-section-supporting {
+  font-size: 0.85rem;
+  color: #D1D5DB;
+  line-height: 1.45;
+  max-width: 520px;
+}
+
+.cta-section-button {
+  background: linear-gradient(135deg, var(--cta-orange), #FF8A3C);
+  color: var(--white);
+  padding: 0.875rem 1.75rem;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: fit-content;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-section-button:hover {
+  background: linear-gradient(135deg, var(--cta-orange-hover), #FF7620);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cta-section {
+    padding: 0 2rem 1.5rem;
+  }
+
+  .cta-section-container {
+    gap: 2rem;
+  }
+
+  .cta-section-heading {
+    font-size: 1.9rem;
+  }
+
+  .cta-section-main {
+    font-size: 1.1rem;
+  }
+
+  .cta-section-supporting {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cta-section-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cta-section-image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .cta-section-heading {
+    font-size: 1.6rem;
+  }
+
+  .cta-section-main {
+    font-size: 1rem;
+  }
+
+  .cta-section-supporting {
+    font-size: 0.9rem;
+  }
+
+  .cta-section-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 2rem 1rem;
+  }
+
+  .cta-section-heading {
+    font-size: 1.4rem;
+  }
+
+  .cta-section-main {
+    font-size: 0.95rem;
+  }
+
+  .cta-section-supporting {
+    font-size: 0.85rem;
+  }
+}
