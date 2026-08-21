@@ -50,6 +50,8 @@
   display: flex;
   width: max-content;
   animation: trustLogoMarquee 28s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
 }
 
 .trust-bar-group {
@@ -130,6 +132,10 @@
 
   .trust-bar-logo {
     flex-basis: 165px;
+  }
+
+  .trust-bar-track {
+    animation-duration: 18s;
   }
 
   .trust-bar-logo {
